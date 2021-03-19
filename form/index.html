@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form id="user-register" action="action.html" method="POST" autocomplete="on">
+    <h1>Register your person</h1>
+    <fieldset>
+      <legend>Information required</legend>
+      <label>Name: 
+        <input type="text" name="name" placeholder="First and last name" required />
+      </label>
+      <label>Email: 
+        <input type="email" name="email" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter the correct email address. Example:user@gmail.com" required />
+      </label>
+      <label>Birthday: 
+        <input type="date" name="date" />
+      </label>
+      <label>Password:
+        <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+      </label>
+      <label>Confirm password: 
+        <input type="password" name="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Passwords do not match. Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Information general</legend>
+      <label>Phone: 
+        <input type="text" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="123-45-678" title="Format: 123-45-678">
+      </label>
+      <label>Your country: 
+        <select class="country-select">
+          <option value="0">-----</option>
+          <optgroup label="A">
+            <option value="1">Afghanistan</option>
+            <option value="2">Albania</option>
+            <option value="3">Algeria</option>
+            <option value="4">American Samoa</option>
+            <option value="5">Andorra</option>
+            <option value="6">Angola</option>
+            <option value="7">Anguilla</option>
+            <option value="8">Antigua & Barbuda</option>
+            <option value="9">Argentina</option>
+            <option value="10">Armenia</option>
+            <option value="11">Aruba</option>
+            <option value="12">Australia</option>
+            <option value="13">Austria</option>
+            <option value="14">Azerbaijan</option>
+          </optgroup>
+          <optgroup label="B">
+            <option value="15">Bahamas</option>
+            <option value="16">Bahrain</option>
+            <option value="17">Bangladesh</option>
+            <option value="18">Barbados</option>
+            <option value="19">Belarus</option>
+            <option value="20">Belgium</option>
+          </optgroup>
+            <optgroup label="C">
+            <option value="21">Canada</option>
+            <option value="22">Canary Islands</option>
+            <option value="23">Cape Verde</option>
+            <option value="24">Cayman Islands</option>
+            <option value="25">Central African Republic</option>
+            <option value="26">Chad</option>
+            <option value="27">Channel Islands</option>
+            <option value="28">Chile</option>
+            <option value="29">China</option>
+          </optgroup>
+        </select>
+      </label>
+      <br>
+      <label>Your position:</label>
+      <div class="options">
+        <input type="checkbox" id="op-1"> <label for="op-1">Front end developer</label>
+        <input type="checkbox" id="op-2"> <label for="op-2">Back end developer</label>
+        <input type="checkbox" id="op-3"> <label for="op-3">Design</label>
+      </div>
+    </fieldset>
+    <input type="submit" name="send" class="submit">
+  </form>
+</body>
+</html>

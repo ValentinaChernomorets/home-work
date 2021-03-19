@@ -1,0 +1,73 @@
+body {
+  margin: 0px;
+  background-color: darkslategrey;
+}
+
+h1 {
+  margin: 0;
+}
+
+#user-register {
+  color: white;
+  font-family: sans-serif;
+  padding: 10px;
+  width: 800px;
+  margin-left: 250px;
+}
+
+#user-register h1 {
+  font-size: 15px;
+  text-align: center;
+}
+
+#user-register label {
+  margin-left: 5px;
+}
+
+#user-register input {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ccc;
+  border-radius: 3px;
+  border: 1px solid grey;
+  color: yellowgreen;
+}
+
+#user-register input:focus {
+  background-color: whitesmoke;
+}
+
+#user-register select {
+  padding: 10px;
+  background-color: #ccc;
+}
+
+#user-register .options input {
+  display:none;
+}
+
+#user-register .options>label {
+  display: block;
+  margin: 5px;
+}
+
+#user-register .options label::before {
+  content: "▢";
+  color: yellowgreen;
+}
+
+#user-register .options input:checked+label::before {
+  content: "▣";
+}
+
+#user-register .submit {
+    margin-top: 10px;
+    margin-left: 350px;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+#user-register .submit:hover {
+    background-color: yellowgreen;
+}
