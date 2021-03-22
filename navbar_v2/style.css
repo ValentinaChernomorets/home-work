@@ -1,0 +1,67 @@
+body, ul {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+  
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: #222;
+}
+
+#navbar {
+  background-color: #556;
+  padding: 0 2.6%;
+}
+
+#navbar ul {
+  display: inline-block;
+}
+
+#navbar li {
+  display: inline-block;
+  padding: 5px;
+}
+
+#navbar li .phone,
+#navbar li .user,
+#navbar li .cart {
+  color: #FF4500;
+  font-size: 18px;
+}
+
+#navbar .logo-box .image {
+  padding: 9px;
+  display: inline-block;
+  position: absolute;
+}
+
+#navbar .nav-brand {
+  margin-left: 6.8%;
+  margin-right: 7.8%;
+}
+
+#navbar .nav-main {
+  margin-right: 19.8%;
+}
+
+#navbar li a {
+  color: white;
+  padding: 30px 16px;
+  display: block;
+}
+
+#navbar::after {
+  content: '';
+  clear: both;
+}
