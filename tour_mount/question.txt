@@ -1,0 +1,5 @@
+Question: Why "from" top have -10% ? 
+  Answer: On the top need property "from"-10, because the flakes must start out of our sight. Like from cloud.
+Question: Why in the top "to" have 100% ?
+  Answer: The properties ease-in, ease-out, ease-in-out and linear is short record of defining a Bezier curve. In our case we use "linear" and set animation from -10% to 100%. We set -10% top, which in turn pulls the curve down. So the snowflakes hide to the bottom.
+  

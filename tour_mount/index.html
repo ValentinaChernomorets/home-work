@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SKY TOUR</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/Dapino-Beach-Air-balloon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Gorditas&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="landscape" class="overlay"></div>
+  <div id="show" class="overlay">
+    <div class="flake">1</div>
+    <div class="flake">2</div>
+    <div class="flake">3</div>
+    <div class="flake">4</div>
+    <div class="flake">5</div>
+    <div class="flake medium">6</div>
+    <div class="flake medium">7</div>
+    <div class="flake medium">8</div>
+    <div class="flake medium">9</div>
+    <div class="flake medium">10</div>
+    <div class="flake small">11</div>
+    <div class="flake small">12</div>
+    <div class="flake small">13</div>
+    <div class="flake small">14</div>
+    <div class="flake small">15</div>
+    <div class="flake small">16</div>
+    <div class="flake small">17</div>
+    <div class="flake small">18</div>
+    <div class="flake small">19</div>
+    <div class="flake small">20</div>
+  </div>
+  <div id="tour-info">
+    <table>
+      <tr>
+        <td>
+          <h2>Tour in the mountains!</h2>
+          <p>Holidays in ski resorts are one of the most popular ways to spend a vacation on the move and get a lot of pleasant memories and a great boost of vivacity. Tur agency "SKY TOUR" offers ski tours for every taste and any time: short weekend trips and long trips to the most interesting and popular ski resorts in the world!</p>
+          <h3>Reviews of our clients</h3>
+          <img src="images/happy.jpg" alt="city" class="image-user">
+          <div class="message">
+            <p class="content">We have been tour mountains in this year. It was unbeliveble. We recomend have a tour with company "SKY TOUR".</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h2>Tour application</h2>
+          <form action="finish.html" method="POST" autocomplete="on">
+            <fieldset>
+              <legend>
+                Personal information
+              </legend>
+              <label>
+                Your name:
+                <input type="text" required autofocus name="username">
+              </label>
+              <label>
+                Your email:
+                <input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+              </label>
+              <label>
+                Phone:
+                <input type="text" name="phone" required pattern="\+[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{3}" placeholder="+373 123 45 678" title="Format: +373 123 45 678">
+              </label>
+            </fieldset>
+            <fieldset>
+              <legend>
+                Tour info
+              </legend>
+              <label>
+                Please enter country
+                <select>
+                  <option value="0">Country</option>
+                  <optgroup label="A">
+                    <option value="1">Afghanistan</option>
+                    <option value="2">Albania</option>
+                    <option value="3">Algeria</option>
+                    <option value="4">American Samoa</option>
+                    <option value="5">Austria</option>
+                    <option value="6">Azerbaijan</option>
+                  </optgroup>
+                  <optgroup label="B">
+                    <option value="7">Bahrain</option>
+                    <option value="8">Bangladesh</option>
+                  </optgroup>
+                  <optgroup label="C">
+                    <option value="9">Canada</option>
+                    <option value="10">Canary Islands</option>
+                    <option value="11">Cape Verde</option>
+                    <option value="12">Cayman Islands</option>
+                  </optgroup>
+                </select>
+              </label>
+              <label>
+                Departure date:
+                <input type="date">
+              </label>
+              <label>
+                Available 10 tickets for all countries: <input type="number" min='1' max='10'>
+              </label>
+            </fieldset>
+            <button>Let's Go</button>
+          </form>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

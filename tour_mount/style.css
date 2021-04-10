@@ -1,0 +1,264 @@
+body {
+  background-color: #3475b9;
+}
+
+#landscape {
+  background-image: url(images/winter-landscape-636634_1920.jpg);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#show .flake {
+  width: 20px;
+  height: 20px;
+  top: -10%;
+  background: radial-gradient(#fff9, #00b9);
+  border-radius: 100%;
+  position: absolute;
+  animation: fall 10s linear infinite;
+  font-size: 0;
+}
+
+#show .flake.medium {
+  width: 12px;
+  height: 12px;
+  animation: fall 20s linear infinite;
+}
+
+#show .flake.small {
+  width: 5px;
+  height: 5px;
+  animation: fall 30s linear infinite;
+}
+
+@keyframes fall {
+  from {top: -10% }
+  to {top: 100% }
+}
+
+#show .flake:nth-child(1) {
+  left: 15%;
+  animation-delay: 8.5s;
+}
+
+#show .flake:nth-child(2) {
+  left: 55%;
+  animation-delay: 1.5s;
+  z-index: 3;
+}
+
+#show .flake:nth-child(3) {
+  left: 86%;
+  animation-delay: 5.5s;
+}
+
+#show .flake:nth-child(4) {
+  left: 25%;
+  animation-delay: 1.5s;
+}
+
+#show .flake:nth-child(5) {
+  left: 80%;
+  animation-delay: 3.5s;
+}
+
+/* medium flake*/
+#show .flake.medium:nth-child(6) {
+  left: 66%;
+  animation-delay: 5.5s;
+}
+
+#show .flake.medium:nth-child(7) {
+  left: 18%;
+  animation-delay: 3.5s;
+}
+
+#show .flake.medium:nth-child(8) {
+  left: 45%;
+  animation-delay: 9.5s;
+}
+
+#show .flake.medium:nth-child(9) {
+  left: 33%;
+  animation-delay: 4.5s;
+}
+
+#show .flake.medium:nth-child(10) {
+  left: 70%;
+  animation-delay: 6.5s;
+}
+
+/* small flake */
+#show .flake.small:nth-child(11) {
+  left: 5%;
+  animation-delay: 10.5s;
+}
+
+#show .flake.small:nth-child(12) {
+  left: 25%;
+  animation-delay: 1.5s;
+}
+
+#show .flake.small:nth-child(13) {
+  left: 35%;
+  animation-delay: 3.5s;
+}
+
+#show .flake.small:nth-child(14) {
+  left: 75%;
+  animation-delay: 9.5s;
+}
+
+#show .flake.small:nth-child(15) {
+  left: 80%;
+  animation-delay: 3.5s;
+}
+
+#show .flake.small:nth-child(16) {
+  left: 14%;
+  animation-delay: 10.5s;
+}
+
+#show .flake.small:nth-child(17) {
+  left: 15%;
+  animation-delay: 1.5s;
+}
+
+#show .flake.small:nth-child(18) {
+  left: 55%;
+  animation-delay: 3.5s;
+}
+
+#show .flake.small:nth-child(19) {
+  left: 65%;
+  animation-delay: 9.5s;
+}
+
+#show .flake.small:nth-child(20) {
+  left: 90%;
+  animation-delay: 3.5s;
+}
+
+/* Tour info and application */
+#tour-info {
+  background-color: #addB;
+  width: 615px;
+  height: 750px;
+  position: absolute;
+  z-index: 2;
+  right: 360px;
+  top: 25px;
+  padding: 15px;
+}
+
+#tour-info h2, h3 {
+  text-align: center;
+  font-family: 'Gorditas', cursive;
+}
+
+#tour-info .image-user {
+  width: 250px;
+  margin-left: 15px;
+}
+
+#tour-info .message {
+  background-color: #fff;
+  width: 230px;
+  display: inline-block;
+  margin-left: 55px;
+  padding: 10px;
+  font: 400 .9em 'Open Sans', sans-serif;
+}
+
+#tour-info .message:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 17px solid #fff;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  left: 326px;
+  top: 265px;
+}
+
+#tour-info .message .content {
+  font-family: 'Indie Flower', cursive;
+}
+
+#tour-info legend {
+  font-weight: bold;
+}
+
+#tour-info p {
+  text-indent: 20px;
+}
+
+#tour-info input, select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid white;
+  margin: 5px;
+}
+
+#tour-info input:focus, select:focus {
+  outline: 0;
+  box-shadow: 0 0 10px blue;
+}
+
+#tour-info fieldset {
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+#tour-info fieldset label {
+  padding: 5px;
+}
+
+#tour-info button {
+  width: 90px;
+  height: 35px;
+  margin-left: 250px;
+  font-weight: bold;
+  font-size: large;
+}
+
+#tour-info button:hover {
+  background-color: #fff;
+  box-shadow: 0 0 10px blue;
+}
+
+/* Style for page finish.html */
+#accept {
+  background-color: #addB;
+  width: 600px;
+  position: absolute;
+  z-index: 2;
+  padding: 5px;
+  left: 360px;
+  top: 25px;
+}
+
+#accept h1 {
+  font-family: 'Gorditas', cursive;
+  text-align: center;
+}
+
+#accept p {
+  text-indent: 20px;
+}
+
+#accept .contact {
+  margin-left: 150px;
+  padding: 5px;
+}
+
+#accept .contact div {
+  padding: 5px;
+}
