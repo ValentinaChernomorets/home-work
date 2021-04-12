@@ -13,7 +13,6 @@ HW1:
     Case 2.
     #contacts {
       position: fixed;
-      font-size: 3em;
       bottom: 3em;
       right: 3em;
       overflow: hidden;
