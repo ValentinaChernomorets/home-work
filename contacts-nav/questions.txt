@@ -1,0 +1,32 @@
+HW1:
+    Case 1.
+    #contacts {
+      position: fixed;
+      font-size: 3em;
+      bottom: 3em;
+      right: 3em;
+      overflow: hidden;
+    }
+    Question: What would be?
+    Answer: If font-size: 3em in #contacts. When the size in "bottom" and "right" is in three times more. And get 54px for "bottom" and "right".
+
+    Case 2.
+    #contacts {
+      position: fixed;
+      font-size: 3em;
+      bottom: 3em;
+      right: 3em;
+      overflow: hidden;
+    }
+    #contacts ul {
+      font-size: 3em;
+    }
+    Question: What would be ?
+    Answer: When the bottom and right give size from body font-size. And the elements in ul have font-size 3em.
+
+HW2.
+Question: What is the difference between EM and REM ?
+Answer:
+    1. EM - calculated relative to the current font-size. If we change current font-size then the "em" currently changed. And the font-size is usually defined in the parent elements.
+    
+    2. REM (root em) - the "rem" unit is relative to the font-size of the <html> element. Or it is a typography unit equal to the root (base) font-size. This means what 1rem will always be equal to the font-size value that was defiitned in the html. Even if we change font-size in current properties rem would be give font-size from root (base, root) font-size. And it is the different between "em" and "rem".
