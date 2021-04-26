@@ -1,0 +1,37 @@
+/* Reset styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+  margin: 0 0 .75em 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  line-height: 1.5em;
+  color: #777;
+}
+
+a {
+  text-decoration: none;
+}
+
+figure,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
