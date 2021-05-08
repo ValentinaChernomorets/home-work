@@ -24,12 +24,14 @@ body {
   padding: var(--spacer);
   background-color: var(--color-main-normal);
 }
+
 .app header h1 {
   color: var(--color-text-light);
 }
 .app .list {
   height: 80vh;
 }
+
 .app section {
   background-color: var(--color-text-muted);
 }
