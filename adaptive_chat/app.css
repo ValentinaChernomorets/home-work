@@ -28,6 +28,7 @@ body {
 .app header h1 {
   color: var(--color-text-light);
 }
+
 .app .list {
   height: 80vh;
 }
