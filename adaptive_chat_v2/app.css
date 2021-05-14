@@ -1,0 +1,189 @@
+:root {
+  --color-main-normal: #1A4568;
+  --color-general-normal: #5F84A1;
+  --color-general-muted:#90AFC4;
+  --color-no-active-muted: #696969;
+  --color-no-active-light: #778899;
+  --color-text-dark: #222;
+  --color-text-muted:#B6D0E1;
+  --color-text-light: #CBDEED;
+  --spacer: .5rem;
+  --img_k: 13;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+}
+
+.app {
+  background-color: var(--color-main-normal);
+  color: var(--color-text-dark);
+  width: 100vw;
+  height: 100vh;
+}
+
+.app header {
+  height: 5em;
+  padding: var(--spacer);
+  background-color: var(--color-main-normal);
+}
+
+.app header h1 {
+  color: var(--color-text-light);
+  padding: 0.7em 0 0 0.7em;
+}
+
+.app .list {
+  height: 37em;
+}
+
+.app section {
+  background-color: var(--color-text-muted);
+}
+
+.app .list ul {
+  height: inherit;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.app .list li {
+  display: table;
+  width: 100%;
+  height: calc(37em / 6);
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--color-general-normal);
+  scroll-snap-align: start;
+}
+
+.app .list li .info .new-message {
+  color: var(--color-general-muted);
+}
+
+.app .list li .info .verified-message {
+  color: var(--color-main-normal);
+}
+
+.app .list li .info .time {
+  color: var(--color-no-active-light);
+}
+
+.app .list li .info div {
+  width: 1.2em;
+  border: .2em solid var(--color-main-normal);
+  border-radius: 1em;
+  text-align: center;
+  background-color: var(--color-main-normal);
+  color: var(--color-text-light);
+}
+
+.app .list li:last-child {
+  border: 0;
+}
+
+.app .list li > div {
+  display: table-cell;
+  vertical-align: top;
+  padding: var(--spacer);
+}
+
+.app .list li .avatar,
+.app .list li .info {
+  width: 20%;
+}
+
+.app .list li .info {
+  text-align: right;
+}
+
+.app .list li .info .time-message {
+  color: var(--color-main-normal);
+}
+
+.app .list li .avatar img {
+  width: calc(var(--img_k) * var(--spacer));
+}
+
+/* Footer style */
+.app footer {
+  height: 5em;
+  padding: var(--spacer);
+  background-color: var(--color-main-normal);
+}
+
+.app footer nav ul {
+  background-color: var(--color-main-normal);
+  display: table;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.app footer li {
+  display: table-cell;
+  text-align: center;
+}
+
+
+.app footer .item-telephone .telephone,
+.app footer .item-info .more-info,
+.app footer .item-chat .chat {
+  font-size: 2em;
+  color: var(--color-text-muted);
+}
+.app footer .item-telephone .telephone,
+.app footer .item-info .more-info {
+  color: var(--color-no-active-muted);
+}
+
+
+.app footer .item-chat .name{
+  color: var(--color-text-light);
+}
+
+.app footer .item-info .name,
+.app footer .item-telephone .name {
+  color: var(--color-no-active-muted);
+}
+
+/* MEDIA QUERY */
+@media (orientation: landscape) and (max-height: 420px) {
+  .app header h1 {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 400px) {
+  .app .list li .avatar, .app .list li .info {
+    width: 25%;
+  }
+  .app .list li .info div {
+    margin-left: 3em;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 420px) {
+  .app .list li .avatar, .app .list li .info {
+    width: 25%;
+  }
+  .app .list li .info div {
+    margin-left: 14em;
+  }
+}
+
+@media (max-width: 1400px) {
+  .app .list li .avatar, .app .list li .info {
+    width: 25%;
+  }
+  .app .list li .info div {
+    margin-left: 18em;
+  }
+}
+
+@media (max-width: 550px) {
+  .app .list li .avatar, .app .list li .info {
+    width: 25%;
+  }
+  .app .list li .info div {
+    margin-left: 5em;
+  }
+}

@@ -1,0 +1,24 @@
+body {
+  /* background-color: #222; */
+  /* padding: 10%;
+  width: 100vw;
+  height: 100vh; */
+  box-sizing: border-box;
+}
+/* In the begining this styles was used */
+.app header {
+  /* background-color: brown; */
+}
+
+.app section {
+  /* background-color: pink; */
+}
+
+.app .list li > div {
+  /* background-color: green; */
+}
+
+.app footer {
+  /* background-color: brown; */
+}
+
