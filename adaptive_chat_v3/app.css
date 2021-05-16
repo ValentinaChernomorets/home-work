@@ -1,0 +1,440 @@
+:root {
+  --color-main-normal: #1A4568;
+  --color-general-normal: #5F84A1;
+  --color-general-muted:#90AFC4;
+  --color-no-active-muted: #696969;
+  --color-no-active-light: #778899;
+  --color-text-dark: #222;
+  --color-text-muted:#B6D0E1;
+  --color-text-light: #CBDEED;
+  --color-background-message-light: #00BFFF;
+  --spacer: .5rem;
+  --spacer-lg: .7em;
+  --spacer-bg: 1em;
+  --spacer-sm: .3em;
+  --img_k: 13;
+  --mes_k: 8;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--spacer-bg);
+}
+
+.app {
+  background-color: var(--color-main-normal);
+  color: var(--color-text-dark);
+  width: 100vw;
+  height: 100vh;
+}
+
+.app header {
+  height: 10vh;
+  padding: var(--spacer);
+  background-color: var(--color-main-normal);
+}
+
+.app header h1 {
+  color: var(--color-text-light);
+  padding: var(--spacer-lg) 0;
+}
+
+.app .list {
+  height: 80vh;
+}
+
+.app section {
+  background-color: var(--color-text-muted);
+}
+
+.app .list ul {
+  height: inherit;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.app .list li {
+  display: table;
+  width: 100%;
+  height: calc(80vh / 6);
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--color-general-normal);
+  scroll-snap-align: start;
+}
+
+.app .list li .info .new-message {
+  color: var(--color-general-muted);
+}
+
+.app .list li .info .verified-message {
+  color: var(--color-main-normal);
+}
+
+.app .list li .info .time {
+  color: var(--color-no-active-light);
+}
+
+.app .list li .info div {
+  width: 1.2em;
+  border: .2em solid var(--color-main-normal);
+  border-radius: var(--spacer-bg);
+  text-align: center;
+  background-color: var(--color-main-normal);
+  color: var(--color-text-light);
+  margin-left: calc( var(--mes_k) * var(--spacer) );
+}
+
+.app .list li:last-child {
+  border: 0;
+}
+
+.app .list li > div {
+  display: table-cell;
+  vertical-align: top;
+  padding: var(--spacer);
+}
+
+.app .list li .avatar,
+.app .list li .info {
+  width: 20%;
+}
+
+.app .list li .info {
+  text-align: right;
+}
+
+.app .list li .info .time-message {
+  color: var(--color-main-normal);
+}
+
+.app .list li .avatar img {
+  width: calc( var(--img_k) * var(--spacer) );
+}
+
+.app .list li .content h3 {
+  display: inline-block;
+}
+
+.app .list li .content div,
+.app footer nav ul .item-chat a div {
+  display: inline-block;
+  border: .2em solid var(--color-background-message-light);
+  border-radius: var(--spacer-bg);
+  background-color: var(--color-background-message-light);
+  color: white;
+  font-size: var(--spacer-lg);
+  width: 1.2em;
+  height: 1.2em;
+  text-align: center;
+}
+
+.app footer nav ul .item-chat a chat {
+  display: inline-block;
+}
+
+.app footer nav ul .item-chat a div {
+  width: 1.5em;
+  height: 1.5em;
+  transform: translateX(-1em);
+}
+
+/* Footer style */
+.app footer nav {
+  height: 10vh;
+  padding-bottom: calc( var(--spacer) / 2 );
+  background-color: var(--color-main-normal);
+}
+
+.app footer nav ul {
+  display: table;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.app footer nav ul li {
+  display: table-cell;
+  text-align: center;
+}
+
+.app footer .item-telephone .telephone,
+.app footer .item-info .more-info,
+.app footer .item-chat .chat {
+  font-size: 2em;
+  color: var(--color-text-muted);
+}
+
+.app footer .item-telephone .telephone,
+.app footer .item-info .more-info {
+  color: var(--color-no-active-muted);
+}
+
+.app footer .item-chat .name {
+  color: var(--color-text-light);
+}
+
+.app footer .item-info .name,
+.app footer .item-telephone .name {
+  color: var(--color-no-active-muted);
+}
+
+/* Media query */
+@media (max-width: 280px) {
+  .app header h1 {
+    font-size: var(--spacer-bg);
+  }
+
+  .app .list li .avatar img {
+    width: calc( var(--img_k) * var(--spacer-sm) );
+  }
+
+  .app .list li .content, .app .list li .info {
+    font-size: var(--spacer-lg);
+  }
+
+  .app footer .item-telephone .telephone,
+  .app footer .item-info .more-info,
+  .app footer .item-chat .chat {
+    font-size: 1.7em;
+  }
+}
+
+@media (max-width: 360px) {
+  .app header h1 {
+    font-size: 1.5em;
+  }
+
+  .app .list li .avatar img {
+    width: calc( var(--img_k) * var(--spacer-sm) );
+  }
+
+  .app .list li .content, .app .list li .info {
+    font-size: var(--spacer-lg);
+  }
+
+  .app footer .item-telephone .telephone,
+  .app footer .item-info .more-info,
+  .app footer .item-chat .chat {
+    font-size: 1.75em;
+  }
+}
+
+@media (max-width: 375px) and (max-width: 815px) {
+  .app .list li .info div {
+    margin-left: calc( var(--mes_k) * var(--spacer-sm) );
+  }
+}
+
+@media (orientation: landscape) and (max-height: 380px) {
+  .app header h1 {
+    font-size: 1.2em;
+    padding: 0 var(--spacer-lg);
+  }
+
+  .app .list li .avatar img {
+    width: calc( var(--img_k) * var(--spacer-sm) );
+  }
+
+  .app .list li > div {
+    font-size: .75em;
+  }
+
+  .app .list li .avatar,
+  .app .list li .info {
+    width: 12%;
+  }
+  
+  .app footer .item-chat .name,
+  .app footer .item-info .name,
+  .app footer .item-telephone .name {
+    display: none;
+  }
+
+  .app footer .item-telephone .telephone, 
+  .app footer .item-info .more-info, 
+  .app footer .item-chat .chat {
+    font-size: 1.75em;
+  }
+
+  .app footer nav ul .item-chat a div {
+    width: var(--spacer-bg);
+    height: var(--spacer-bg);
+    font-size: 0.5em;
+  }
+
+  .app footer nav ul .item-chat {
+    width: 12em;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 420px) {
+  .app header h1 {
+    font-size: var(--spacer-bg);
+  }
+
+  .app footer .item-telephone .telephone,
+  .app footer .item-info .more-info,
+  .app footer .item-chat .chat {
+    font-size: 1.5em;
+  }
+
+  .app .list li .info div {
+    margin-left: calc( var(--mes_k) * var(--spacer-bg) );
+  }
+}
+
+@media (max-width: 550px) {
+  .app header h1 {
+    font-size: 1.7em;
+    padding: var(--spacer-sm) 0 var(--spacer-sm) var(--spacer-lg);
+  }
+
+  .app .list li .avatar img {
+    width: calc( var(--img_k) * var(--spacer-sm) );
+  }
+
+  .app .list li .content,
+  .app .list li .info {
+    font-size: .75em;
+  }
+
+  .app .list li .info {
+    width: 22%;
+  }
+
+  .app footer .item-telephone .telephone,
+  .app footer .item-info .more-info,
+  .app footer .item-chat .chat {
+    font-size: 1.65em;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 550px) {
+  .app header h1 {
+    font-size: var(--spacer-bg);
+    padding: 0;
+  }
+
+  .app .list li .avatar img {
+    width: calc( var(--img_k) * var(--spacer-sm) );
+  }
+
+  .app .list li .content, .app .list li .info {
+    font-size: var(--spacer-bg);
+  }
+
+  .app .list li .info {
+    width: 15%;
+  }
+
+  .app footer .item-telephone .telephone, 
+  .app footer .item-info .more-info, 
+  .app footer .item-chat .chat {
+    font-size: 1.5em;
+  }
+
+  .app footer nav li a .name {
+    display: none;
+  }
+
+  .app footer .item-chat {
+    width: 40%;
+  }
+
+  .app footer nav ul .item-chat a div {
+    width: var(--spacer-bg);
+    height: var(--spacer-bg);
+  }
+}
+
+@media (max-width: 280px) and (max-height: 655px) {
+  .app header h1 {
+    font-size: var(--spacer-bg);
+  }
+
+  .app .list li .avatar img {
+    width: calc( var(--img_k) * var(--spacer-sm) );
+  }
+
+  .app .list li .content,
+  .app .list li .info {
+    font-size: var(--spacer-lg);
+  }
+
+  .app footer .item-telephone .telephone,
+  .app footer .item-info .more-info,
+  .app footer .item-chat .chat {
+    font-size: 1.7em;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 655px) {
+  .app header h1 {
+    font-size: var(--spacer-bg);
+  }
+
+  .app .list li .avatar img {
+    width: calc( var(--img_k) * var(--spacer-sm) );
+  }
+
+  .app .list li .content, .app .list li .info {
+    font-size: var(--spacer-lg);
+  }
+
+  .app footer .item-telephone .telephone, 
+  .app footer .item-info .more-info, 
+  .app footer .item-chat .chat {
+    font-size: var(--spacer-bg);
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  .app .list li .avatar img {
+    width: calc( var(--img_k) * var(--spacer) );
+  }
+
+  .app .list li .content,
+  .app .list li .info {
+    font-size: var(--spacer-bg);
+  }
+
+  .app footer .item-telephone .telephone,
+  .app footer .item-info .more-info,
+  .app footer .item-chat .chat {
+    font-size: 1.7em;
+  }
+
+  .app .list li .avatar,
+  .app .list li .info {
+    width: 15%;
+  }
+
+  .app .list li .info div {
+    margin-left: calc( var(--mes_k) * var(--spacer-bg)*2 );
+  }
+}
+
+@media (max-width: 770px) and (max-height: 1025px) {
+  .app .list li .info div {
+    margin-left: calc( var(--mes_k) * var(--spacer-bg) );
+  }
+}
+
+/* I want to use this style for Ipad Pro. But broke style for phone size. 
+  How to corect use this style? 
+*/
+/* @media (max-width: 1024px) and (max-height: 1400px) {
+  .app .list li .info div {
+    margin-left: calc( var(--mes_k) * var(--spacer-bg)*2 );
+  }
+  .app footer .item-telephone .telephone, 
+  .app footer .item-info .more-info, 
+  .app footer .item-chat .chat {
+    font-size: 3em;
+  }
+  .app footer .item-chat {
+    width: 20em;
+  }
+  .app footer nav ul .item-chat a div {
+    font-size: var(--spacer-bg);
+  }
+} */
