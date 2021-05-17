@@ -11,10 +11,8 @@
   --spacer: .5rem;
   --spacer-lg: .7em;
   --spacer-bg: 1em;
-  --header_h: 4em;
-  --header_h_o: 2em;
-  --footer_h: 4.2em;
-  --footer_h_o: 2.2em;
+  --height: 4em;
+  --height_o: 2em;
   --spacer-sm: .3em;
   --img_k: 13;
   --mes_k: 8;
@@ -33,7 +31,7 @@ body {
 }
 
 .app header {
-  height: var(--header_h);
+  height: var(--height);
   padding: var(--spacer);
   background-color: var(--color-main-normal);
 }
@@ -44,7 +42,7 @@ body {
 }
 
 .app .list {
-  height: calc(100vh - var(--header_h) - var(--footer_h));
+  height: calc(100vh - var(--height)*2);
 }
 
 .app section {
@@ -60,7 +58,7 @@ body {
 .app .list li {
   display: table;
   width: 100%;
-  height: calc((100vh - var(--header_h) - var(--footer_h)) / 6);
+  height: calc((100vh - var(--height)) / 6);
   box-sizing: border-box;
   border-bottom: 1px solid var(--color-general-normal);
   scroll-snap-align: start;
@@ -132,11 +130,9 @@ body {
   text-align: center;
 }
 
-
-
 /* Footer style */
 .app footer nav {
-  height: var(--footer_h);
+  height: var(--height);
   padding-bottom: calc( var(--spacer) / 2 );
   background-color: var(--color-main-normal);
 }
@@ -232,7 +228,7 @@ body {
 
 @media (orientation: landscape) and (max-height: 380px) {
   .app header { 
-    height: var(--header_h_o);
+    height: var(--height_o);
   }
 
   .app header h1 {
@@ -241,11 +237,11 @@ body {
   }
 
   .app .list {
-    height: calc(100vh - var(--header_h_o) - var(--footer_h_o));
+    height: calc(100vh - var(--height_o)*2);
   }
 
   .app .list li {
-    height: calc((100vh - var(--header_h_o) - var(--footer_h_o)) / 6);
+    height: calc((100vh - var(height_o)*2) / 6);
  
   }
 
@@ -263,7 +259,7 @@ body {
   }
 
   .app footer nav {
-    height: var(--footer_h_o);
+    height: var(--height_o);
   }
 
   .app footer .item-chat .name,
@@ -333,7 +329,7 @@ body {
 
 @media (orientation: landscape) and (max-height: 550px) {
   .app header { 
-    height: var(--header_h_o);
+    height: var(--height_o);
   }
   
   .app header h1 {
@@ -342,11 +338,11 @@ body {
   }
 
   .app .list {
-    height: calc(100vh - var(--header_h_o) - var(--footer_h_o));
+    height: calc(100vh - var(--height_o)*2);
   }
 
   .app .list li {
-    height: calc((100vh - var(--header_h_o) - var(--footer_h_o)) / 6);
+    height: calc((100vh - var(--height_o)*2) / 6);
   }
 
   .app .list li .avatar img {
@@ -372,7 +368,7 @@ body {
   }
 
   .app footer nav {
-    height: var(--footer_h_o);
+    height: var(--height_o);
   }
 
   .app footer nav li a .name {
