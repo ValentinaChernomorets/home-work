@@ -1,9 +1,9 @@
 Question: Why the decision on the large screen is better?
-Answear: The desision for large screen is better, because: 
-  - First: the unobtrusive advertising;
-  - Second: if we use mobile phone we force the user to perform unnecessary actions, as in the case
-            on the large screen advertising is not bothering users;
+Answer: The decision for large screen is better, because: 
+  - First: unobtrusive advertising;
+  - Second: if we use mobile phone we force the user to perform unnecessary actions.
+            On the large screen advertising is not bothering users;
   - Third: the user turns to advertising only if interested;
-  - Fourth: if user use mobile phone, she/he sees an advertisement in screen, he does not understand where she/he is. 
+  - Fourth: if user use mobile phone, the advertisement obstructs the content, he does not understand where she/he is. 
            User disorientation.
-  Generally modals interrupt the user experience and make it impossible to interfere with the parent page, hidden content behind the modal window
+  Generally modals interrupt the user experience and make it impossible to interact with the parent page. Content hidden behind the modal window.
