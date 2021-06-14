@@ -1,0 +1,88 @@
+body {
+  background-color: #333;
+}
+
+.container {
+  width: 80%;
+  margin: 5% auto;
+}
+
+.owl-carousel::after {
+  margin: 0 auto;
+  content: url(images/android_mockup.png);
+  position: absolute;
+  top: 0;
+  max-width: 400px;
+  left: 0;
+  right: 0;
+  border-radius: 36px;
+  padding: 70px 0;
+  z-index: -1;
+  transform: scale(1.45);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.owl-carousel .owl-item img {
+  transform: scale(0.6);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.owl-carousel .active img {
+  transform: scale(0.6);
+  opacity: 0.5;
+}
+
+.owl-carousel .active+.active img {
+  transform: scale(0.7);
+  opacity: 0.75;
+}
+
+.owl-carousel .center img {
+  transform: scale(0.8) !important;
+  opacity: 1 !important;
+}
+
+.owl-carousel .center+.active+.active img {
+  transform: scale(0.6) !important;
+  opacity: 0.5 !important;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 980px) {
+  .owl-carousel .center img {
+    transform: scale(0.8) !important;
+    opacity: 0.75 !important;
+  }
+
+  .owl-carousel .active img {
+    transform: scale(0.7);
+    opacity: 0.75;
+  }
+
+  .owl-carousel::after {
+    padding: 0;
+    transform: scale(1);
+    top: -10px;
+    left: -10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .owl-carousel .center img {
+    transform: scale(0.8) !important;
+    opacity: 1 !important;
+  }
+
+  .owl-carousel::after {
+    transform: scale(1.8);
+    top: 280px;
+    left: -23px;
+    max-width: 390px;
+  } 
+}
