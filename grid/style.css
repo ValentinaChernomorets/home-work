@@ -1,0 +1,115 @@
+:root {
+  --main-color-text: #FFFFFF;
+  --main-color-background: #000000;
+  --main-border-color: #00BFFF;
+  --general-border-color: #BA55D3;
+  --spacer: 1em;
+}
+
+body {
+  background-color: var(--main-color-background);
+  color: var(--main-color-text);
+  text-decoration: none;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color-text);
+}
+
+.container {
+  width: 80%;
+  border: 1px solid var(--main-border-color);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-row: auto 1fr;
+}
+
+.container header {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.container header h1 {
+  text-align: center;
+}
+
+.container header p {
+  margin-left: var(--spacer);
+}
+
+.container header h1 span {
+  color: var(--general-border-color);
+}
+
+.container article h2,
+.container article h3 {
+  text-align: center;
+}
+
+.container header p,
+.container article p {
+  text-align: justify;
+  word-break: break-all;
+  margin-right: var(--spacer);
+}
+
+.container article .news_links {
+  text-align: right;
+}
+
+.container .news-fresh-wrapper {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.container .news-other-wrapper {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container .news-fresh-wrapper {
+  border: 1px solid var(--general-border-color);
+}
+
+.container .news-fresh-wrapper {
+  order: 1;
+}
+
+.container .news-other-wrapper {
+  order: 2;
+}
+
+.container picture img {
+  width: 60%;
+  float: left;
+  margin-right: var(--spacer);
+}
+
+@media (max-width: 992px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .container .news-fresh-wrapper {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .container .news-other-wrapper {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-template-columns: 1fr;
+  }
+
+  .container picture img {
+    width: 100%;
+    float: none;
+    margin-right: var(--spacer);
+  }
+}
