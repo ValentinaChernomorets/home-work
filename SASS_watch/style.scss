@@ -1,0 +1,155 @@
+$darkColor: #223;
+$mainMaterialColor: #B8860B;
+$generalMaterialColor: #FF8C00;
+$generalMaterialColorlighter:#FFD700;
+$generalMaterialTextColor: #F0F8FF;
+$mainSize: 500px;
+$innerSize: 0.9 * $mainSize;
+$externalSize: 1 * $mainSize;
+$externalSizeSmall: 0.95 * $mainSize;
+$innerRadius: $innerSize / 2;
+$dashW: 0.03 * $mainSize;
+$dashH: 0.010 * $mainSize;
+
+@mixin gradient($from, $to, $type_box) {
+  @if $type_box == bezel {
+    background-color: $mainMaterialColor;
+  } @else if $type_box == dash {
+    background: linear-gradient(0deg, $from, $generalMaterialTextColor, $to);
+  } @else if $type_box == carcass_first {
+    background: linear-gradient(45deg, $from, $generalMaterialTextColor, $to);
+  } @else if $type_box == carcass_second {
+    background: linear-gradient(0deg, $from, $generalMaterialTextColor, $to);
+  }
+  @else {
+    background: linear-gradient(45deg, $from, $generalMaterialTextColor, $to);
+  }
+}
+
+@mixin box ($w, $h, $bg_from, $bg_to, $type_box) {
+  width: $w;
+  height: $h;
+  @include gradient($bg_from, $bg_to, $type_box);
+}
+
+@mixin center {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;  
+}
+
+@mixin round {
+  border-radius: 100%;
+}
+
+@mixin rectangular {
+  border-radius: 10%;
+}
+
+@mixin arrows ($top, $type_arrows) {
+  background: $darkColor;
+  position: relative;
+  left: $innerRadius;
+  top: $top;
+  @include arrow_size($type_arrows);
+}
+
+@mixin arrow_size($type_arrows) {
+  $key_w: 0;
+  $key_h: 0;
+  @if $type_arrows == hours {
+    $key_w: 0.03;
+    $key_h: 0.25;
+  } @else if $type_arrows == minutes {
+    $key_w: 0.02;
+    $key_h: 0.35;
+  } @else {
+    $key_w: 0.01;
+    $key_h: 0.45;
+  }
+  width:  $key_w * $mainSize;
+  height: $key_h * $mainSize;
+}
+
+@keyframes move_seconds {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+// COMMON STYLES
+body {
+  background-color: $darkColor;
+}
+
+// COMPONENT STYLES
+// ROOT CONTAINER
+.watch {
+  @include box($mainSize, $mainSize, $mainMaterialColor, $mainMaterialColor, bezel);
+  @include center;
+  @include round;
+
+  .carcass_first {
+    @include box($externalSize, $externalSize, $generalMaterialColor, $generalMaterialColorlighter, carcass_first);
+    @include center;
+    @include rectangular;
+
+    .carcass_second {
+      @include box($externalSizeSmall, $externalSizeSmall, darken($mainMaterialColor, 20%), darken($mainMaterialColor, 25%), carcass_second);
+      @include center;
+      @include rectangular;
+
+      .screen {
+        @include box($innerSize, $innerSize, $mainMaterialColor, $generalMaterialColor, clock_face);
+        @include center;
+        @include round;
+
+        .hours_container {
+          @include center;
+          .hours {
+            transform-origin: 50% 100%;
+            @include arrows(30%, hours);
+            
+          }
+        }
+
+        .minutes_container {
+          @include center;
+          .minutes {
+            transform-origin: 50% 100%;
+            @include arrows(19%, minutes);
+          }
+        }
+        
+        .seconds_container {
+          @include center;
+          .seconds {
+            transform-origin: 50% 80%;
+            animation: move_seconds 60s infinite;
+            animation-timing-function: steps(60, end);
+            z-index: 8;
+            @include arrows(7.7%, second);
+          }
+        }
+
+        .dash {
+          @include box($dashW, $dashH, $generalMaterialColor, $generalMaterialColor, dash);
+          @include center;
+          margin-right: $dashW;
+          transform-origin: - $innerRadius + 2 * $dashW 0;
+
+          @for $n from 1 through 60 {
+            &:nth-child(#{$n}) {
+              transform: rotate( ($n - 1) * 6deg );
+              @if ($n - 1) % 5 == 0 {
+                background: red;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

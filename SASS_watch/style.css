@@ -1,0 +1,472 @@
+@-webkit-keyframes move_seconds {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes move_seconds {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+body {
+  background-color: #223;
+}
+
+.watch {
+  width: 500px;
+  height: 500px;
+  background-color: #B8860B;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 100%;
+}
+
+.watch .carcass_first {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(45deg, #FF8C00, #F0F8FF, #FFD700);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 10%;
+}
+
+.watch .carcass_first .carcass_second {
+  width: 475px;
+  height: 475px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#584005), color-stop(#F0F8FF), to(#402e04));
+  background: linear-gradient(0deg, #584005, #F0F8FF, #402e04);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 10%;
+}
+
+.watch .carcass_first .carcass_second .screen {
+  width: 450px;
+  height: 450px;
+  background: linear-gradient(45deg, #B8860B, #F0F8FF, #FF8C00);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 100%;
+}
+
+.watch .carcass_first .carcass_second .screen .hours_container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.watch .carcass_first .carcass_second .screen .hours_container .hours {
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  background: #223;
+  position: relative;
+  left: 225px;
+  top: 30%;
+  width: 15px;
+  height: 125px;
+}
+
+.watch .carcass_first .carcass_second .screen .minutes_container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.watch .carcass_first .carcass_second .screen .minutes_container .minutes {
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  background: #223;
+  position: relative;
+  left: 225px;
+  top: 19%;
+  width: 10px;
+  height: 175px;
+}
+
+.watch .carcass_first .carcass_second .screen .seconds_container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.watch .carcass_first .carcass_second .screen .seconds_container .seconds {
+  -webkit-transform-origin: 50% 80%;
+          transform-origin: 50% 80%;
+  -webkit-animation: move_seconds 60s infinite;
+          animation: move_seconds 60s infinite;
+  -webkit-animation-timing-function: steps(60, end);
+          animation-timing-function: steps(60, end);
+  z-index: 8;
+  background: #223;
+  position: relative;
+  left: 225px;
+  top: 7.7%;
+  width: 5px;
+  height: 225px;
+}
+
+.watch .carcass_first .carcass_second .screen .dash {
+  width: 15px;
+  height: 5px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#FF8C00), color-stop(#F0F8FF), to(#FF8C00));
+  background: linear-gradient(0deg, #FF8C00, #F0F8FF, #FF8C00);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  margin-right: 15px;
+  -webkit-transform-origin: -195px 0;
+          transform-origin: -195px 0;
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(1) {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  background: red;
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(2) {
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(3) {
+  -webkit-transform: rotate(12deg);
+          transform: rotate(12deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(4) {
+  -webkit-transform: rotate(18deg);
+          transform: rotate(18deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(5) {
+  -webkit-transform: rotate(24deg);
+          transform: rotate(24deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(6) {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  background: red;
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(7) {
+  -webkit-transform: rotate(36deg);
+          transform: rotate(36deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(8) {
+  -webkit-transform: rotate(42deg);
+          transform: rotate(42deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(9) {
+  -webkit-transform: rotate(48deg);
+          transform: rotate(48deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(10) {
+  -webkit-transform: rotate(54deg);
+          transform: rotate(54deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(11) {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+  background: red;
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(12) {
+  -webkit-transform: rotate(66deg);
+          transform: rotate(66deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(13) {
+  -webkit-transform: rotate(72deg);
+          transform: rotate(72deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(14) {
+  -webkit-transform: rotate(78deg);
+          transform: rotate(78deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(15) {
+  -webkit-transform: rotate(84deg);
+          transform: rotate(84deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(16) {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background: red;
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(17) {
+  -webkit-transform: rotate(96deg);
+          transform: rotate(96deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(18) {
+  -webkit-transform: rotate(102deg);
+          transform: rotate(102deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(19) {
+  -webkit-transform: rotate(108deg);
+          transform: rotate(108deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(20) {
+  -webkit-transform: rotate(114deg);
+          transform: rotate(114deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(21) {
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
+  background: red;
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(22) {
+  -webkit-transform: rotate(126deg);
+          transform: rotate(126deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(23) {
+  -webkit-transform: rotate(132deg);
+          transform: rotate(132deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(24) {
+  -webkit-transform: rotate(138deg);
+          transform: rotate(138deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(25) {
+  -webkit-transform: rotate(144deg);
+          transform: rotate(144deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(26) {
+  -webkit-transform: rotate(150deg);
+          transform: rotate(150deg);
+  background: red;
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(27) {
+  -webkit-transform: rotate(156deg);
+          transform: rotate(156deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(28) {
+  -webkit-transform: rotate(162deg);
+          transform: rotate(162deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(29) {
+  -webkit-transform: rotate(168deg);
+          transform: rotate(168deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(30) {
+  -webkit-transform: rotate(174deg);
+          transform: rotate(174deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(31) {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background: red;
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(32) {
+  -webkit-transform: rotate(186deg);
+          transform: rotate(186deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(33) {
+  -webkit-transform: rotate(192deg);
+          transform: rotate(192deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(34) {
+  -webkit-transform: rotate(198deg);
+          transform: rotate(198deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(35) {
+  -webkit-transform: rotate(204deg);
+          transform: rotate(204deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(36) {
+  -webkit-transform: rotate(210deg);
+          transform: rotate(210deg);
+  background: red;
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(37) {
+  -webkit-transform: rotate(216deg);
+          transform: rotate(216deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(38) {
+  -webkit-transform: rotate(222deg);
+          transform: rotate(222deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(39) {
+  -webkit-transform: rotate(228deg);
+          transform: rotate(228deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(40) {
+  -webkit-transform: rotate(234deg);
+          transform: rotate(234deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(41) {
+  -webkit-transform: rotate(240deg);
+          transform: rotate(240deg);
+  background: red;
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(42) {
+  -webkit-transform: rotate(246deg);
+          transform: rotate(246deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(43) {
+  -webkit-transform: rotate(252deg);
+          transform: rotate(252deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(44) {
+  -webkit-transform: rotate(258deg);
+          transform: rotate(258deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(45) {
+  -webkit-transform: rotate(264deg);
+          transform: rotate(264deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(46) {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  background: red;
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(47) {
+  -webkit-transform: rotate(276deg);
+          transform: rotate(276deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(48) {
+  -webkit-transform: rotate(282deg);
+          transform: rotate(282deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(49) {
+  -webkit-transform: rotate(288deg);
+          transform: rotate(288deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(50) {
+  -webkit-transform: rotate(294deg);
+          transform: rotate(294deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(51) {
+  -webkit-transform: rotate(300deg);
+          transform: rotate(300deg);
+  background: red;
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(52) {
+  -webkit-transform: rotate(306deg);
+          transform: rotate(306deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(53) {
+  -webkit-transform: rotate(312deg);
+          transform: rotate(312deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(54) {
+  -webkit-transform: rotate(318deg);
+          transform: rotate(318deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(55) {
+  -webkit-transform: rotate(324deg);
+          transform: rotate(324deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(56) {
+  -webkit-transform: rotate(330deg);
+          transform: rotate(330deg);
+  background: red;
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(57) {
+  -webkit-transform: rotate(336deg);
+          transform: rotate(336deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(58) {
+  -webkit-transform: rotate(342deg);
+          transform: rotate(342deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(59) {
+  -webkit-transform: rotate(348deg);
+          transform: rotate(348deg);
+}
+
+.watch .carcass_first .carcass_second .screen .dash:nth-child(60) {
+  -webkit-transform: rotate(354deg);
+          transform: rotate(354deg);
+}
+/*# sourceMappingURL=style.css.map */
