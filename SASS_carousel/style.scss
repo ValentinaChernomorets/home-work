@@ -1,0 +1,73 @@
+$darkColor: #222;
+$cols: 36;
+$rows: 24;
+$size: 33px;
+
+@mixin center {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+@keyframes showImages {
+  0% {
+    background-image: url(images/1.jpg), url(images/1.jpg);
+  }
+  25% {
+    background-image: url(images/2.jpg), url(images/2.jpg);
+  }
+  50% {
+    background-image: url(images/3.jpg), url(images/3.jpg);
+  }
+  75% {
+    background-image: url(images/4.jpg), url(images/4.jpg);
+  }
+  100% {
+    background-image: url(images/5.jpg), url(images/5.jpg);
+  }
+}
+
+body {
+  background-color: $darkColor;
+  color: black;
+} 
+
+#carousel {
+  width: $cols * $size;
+  height: $rows * $size;
+  border: $size * 0.05 solid lighten($darkColor, 10%);
+  @include center;
+    .slide {
+      display: grid;
+      grid-template-columns: repeat($cols, $size);
+      grid-template-rows: repeat($rows, $size);
+      width: inherit;
+      height: inherit;
+      $offX: 0;
+      $offY: 0;
+      @for $n from 1 through $cols * $rows {
+        &>div:nth-child(#{$n}) {
+          background-position-x: $offX * - $size;
+          background-position-y: $offY * - $size;
+          animation-name: showImages;
+          animation-duration: 25s;
+          animation-timing-function: ease-in;
+          animation-iteration-count: infinite;
+          animation-fill-mode: forwards;
+        }
+        $offX: $offX + 1;
+        @if $offX % $cols==0 {
+          $offX: 0;
+          $offY: $offY + 1;
+        }
+      }
+      &>div {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+      }
+    }
+}
