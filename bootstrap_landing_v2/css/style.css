@@ -1,0 +1,213 @@
+:root {
+  --SizePage: 3000px;
+  --MainColor: #343791;
+  --MainColorText: #FFFFFF;
+  --MainColorBtn: #00c899;
+  --MainColorDark: #000000;
+  --MainColorLight: #ccdbe8;
+}
+
+body {
+  min-height: var(--SizePage);
+}
+
+.newsfeed {
+  background-color: var(--MainColorText);
+}
+
+.container.advertising {
+  background-color: var(--MainColor);
+  padding-top: 5%;
+}
+
+/* NAVBAR */
+.navbar-expand {
+  background-color: var(--MainColor);
+}
+
+.navbar ul li .nav-link:hover {
+  color: var(--MainColorBtn);
+}
+
+.navbar ul li .nav-link.bttn:hover {
+  color: var(--MainColorText);
+}
+
+.navbar-expand .navbar-brand img {
+  width: 30px;
+}
+
+.nav-link.bttn {
+  background: var(--MainColorBtn);
+  padding: 5px 30px;
+  width: 120px;
+}
+
+.bttn.green {
+  background: var(--MainColorBtn);
+  width: 155px;
+  padding: 10px 35px;
+  margin-top: 40px;
+}
+
+/* CAROUSEL NEWSFEED */
+#newsfeed .carousel-indicators {
+  margin: 0;
+  left: unset;
+  right: -100%;
+  height: 100%;
+}
+  
+#newsfeed .carousel-indicators  button {
+  text-indent: 0;
+  width: 3em;
+  height: 3em;
+  position: relative;
+  border: 1px solid var(--MainColorText);
+  box-shadow: 0 5px 10px rgb(0 9 128 / 4%), 0 7px 18px rgb(0 9 128 / 5%);
+  opacity: unset;
+}
+  
+#newsfeed .carousel-indicators button.active::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 2px dashed var(--MainColor);
+  position: absolute;
+  top: 0;
+  border-radius: 100%;
+  animation: rotation 5s infinite linear;
+}
+
+/* CAROUSEL CIRCLE*/
+#newsfeed .carousel-inner {
+  overflow: visible;
+}
+
+#newsfeed .carousel-caption {
+  left: 258%;
+  right: -427%;
+  top: 0;
+  text-align: left;
+}
+
+#newsfeed .carousel-caption span {
+  background: var(--MainColorBtn);
+  display: inline-block;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  width: 125px;
+  margin-bottom: 15px;
+}
+
+#newsfeed .carousel-indicators button:nth-child(1) {
+  top: -95px;
+  left: -210px;
+}
+
+#newsfeed .carousel-indicators button:nth-child(2) {
+  top: -75px;
+  left: -135px;
+}
+
+#newsfeed .carousel-indicators button:nth-child(3) {
+  top: -13px;
+  left: -105px;
+}
+#newsfeed .carousel-indicators button:nth-child(4) {
+  top: 50px;
+  left: -135px;
+}
+
+#newsfeed .carousel-indicators button:nth-child(5) {
+  top: 75px;
+  left: -210px;
+}
+
+#newsfeed .carousel-indicators button i {
+  color: var(--MainColor);
+  font-weight: 900;
+}
+
+/* PHONE CAROUSEL MOCKUP */
+.newsfeed .carousel-inner {
+  padding: 16px 20px 30px 19px;
+  background: rgba(0,0,0,0) url(../images/mockup_1.png) no-repeat scroll top center;
+  background-size: 100%;
+  max-width: 281px;
+  margin: 0 auto;
+  margin-top: 0;
+  position: relative;
+}
+
+.newsfeed .carousel-inner:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 437px;
+  height: 437px;
+  top: 55px;
+  left: 65px;
+  border-right: 1px dashed var(--MainColorDark);
+  border-radius: 50%;
+}
+
+.newsfeed .carousel-inner .carousel-item img {
+    border-radius: 20px;
+}
+
+/* KEYFRAMES */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* PRICING STYLE */
+.pricing {
+  background: rgba(52,55,145,.04);
+  position: relative;
+  border-radius: 0 0 50% 50%;
+}
+
+.pricing .card {
+  position: relative;
+  top: -1em;
+  left: 1em;
+}
+
+.pricing .card .card-icon {
+  background: var(--MainColorText);
+  color: var(--MainColor);
+  position: absolute;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  right: 60px;
+  top: -30px;
+  box-shadow: var(--MainColorLight) 3px 3px 6px 0 inset, rgb(255 255 255 / 50%) -3px -3px 6px 1px inset;
+}
+
+.pricing .card .card-bttn {
+  margin-top: 25px;
+  
+}
+
+.pricing .card .card-bttn a {
+  background-color: var(--MainColor);
+  box-shadow: 0 10px 18px 0 rgb(52 55 145 / 30%);
+}
+
+.pricing .col h2 {
+  background-color: var(--MainColor);
+}
+
+.pricing header p {
+  width: 700px;
+  margin: auto;
+}
