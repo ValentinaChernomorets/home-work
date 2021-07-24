@@ -1,0 +1,180 @@
+// NAVBAR STYLE
+.navbar {
+  position: absolute;
+  z-index: 2000;
+  width: 100%;
+
+  .navbar-brand {
+    height: 70px;
+    width: auto;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .container-fluid {
+    .navbar-toggler {
+      border-color: $white;
+    }
+
+    .navbar-collapse {
+      &.show {
+        ul {
+          li {
+            a {
+              border-bottom: 1px solid $gray-400;
+              &::after {
+                content: "";
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+
+      ul {
+        li {
+          .dropdown-menu {
+            border-style: none;
+          }
+
+          .fw-medium {
+            font-weight: $font-weight-medium;
+          }
+
+          a {
+            &:hover {
+              color: $rich !important;
+            }
+            
+            &::after {
+              content: "";
+              display: none;
+            }
+          }
+
+          .dropdown-menu.show {
+            li {
+              a {
+                font-size: $hx-large-font-size;
+                font-family: $font-family-sans-cormorant;
+                text-transform: none;
+                font-style: italic;
+                letter-spacing: 0;
+                font-weight: $font-weight-medium;
+
+                &:hover {
+                  background-color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// CAROUSEL STYLE
+#carouselHeader {
+  .carousel-caption {
+    top: 1.25rem;
+    left: auto;
+    .h-first {
+      white-space: nowrap;
+      font-weight: $font-weight-normal;
+      color: $gold;
+      font-family: $font-family-sans-decor;
+    }
+    
+    .h-second {
+      white-space: nowrap;
+      line-height: 100px;
+      font-weight: $font-weight-semi-bold;
+      color: $black;
+      letter-spacing: 12px;
+      font-family: $font-family-sans-serif;
+    }
+
+    .caption {
+      white-space: normal;
+      font-size: $font-size-base * 1.65;
+      line-height: 36px;
+      font-weight: $font-weight-normal;
+      color: $black;
+      font-family: $font-family-sans-cormorant;
+      font-style: italic;
+    }
+
+    .button-wrapper {
+      button {
+        font-weight: $font-weight-medium;
+        box-sizing: border-box;
+        letter-spacing: .19em;
+        font-family: $font-family-sans-serif;
+        font-style: normal;
+        border-radius: unset;
+        cursor: pointer;
+
+        &.btn-first {
+          background-color: $black;
+          color: $white;
+          border: solid 0.2em $white;
+          outline: solid 0.1em $black;
+        }
+
+        &.btn-second {
+          color: $rich;
+          border: solid 0.1em $rich;
+          outline-offset: 2px;
+          outline: solid 0.1em $rich;
+          &:hover {
+            color: $white;
+          }
+        }
+
+        &:hover {
+          background-color: $rich;
+        }
+      }
+    }
+  }
+
+  .img-background {
+    object-fit: cover;
+  }
+
+// BACKGROUND EFFECT 
+  @for $n from 1 through 4 {
+    .carousel-item:nth-child(#{$n}) {
+      @if ($n % 2) == 0 {
+        .img-background {
+          transform-origin: 50px 50px;
+          animation: zoomOut 5s;
+        }
+      }
+      @else {
+        .img-background {
+          transform-origin: 50px 50px;
+          animation: zoomIn 5s;
+        }
+      }
+    }
+  }
+
+// KEYFRAMES
+  @keyframes zoomOut {
+    from {transform: scale(1.2);}
+    to {transform: scale(1.0);}
+  }
+
+  @keyframes zoomIn {
+    from {transform: scale(1.0);}
+    to {transform: scale(1.2);}
+  }
+}
+
+.vh-100 {
+  height: 100vh;
+}
