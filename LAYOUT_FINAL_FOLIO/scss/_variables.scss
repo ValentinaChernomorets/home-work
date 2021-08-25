@@ -1,0 +1,185 @@
+// COLOR CUSTOM
+// scss-docs-start gray-color-variables
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+);
+// scss-docs-end gray-colors-map
+// fusv-enable
+
+// scss-docs-start color-variables
+$blue:    #0d6efd;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #198754;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+// COLORS & PALETTES CUSTOM
+$smoky-black:   #1c1613ff;
+$platinum:      #e7e2ddff;
+$chestnut:      #974d35ff;
+$persian-orange:#c78b51ff;
+$spanish-gray:  #909594ff;
+
+$gold:          #c19d56;
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800,
+
+  "smoky-black": $smoky-black,
+  "platinum": $platinum,
+  "chestnut": $chestnut,
+  "persian-orange": $persian-orange,
+  "spanish-gray": $spanish-gray,
+
+  "gold":       $gold
+);
+// scss-docs-end colors-map
+
+// scss-docs-start theme-color-variables
+$primary:       $blue;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-900;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $smoky-black,
+  "secondary":  $persian-orange,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+);
+
+
+
+// FONTS
+$font-family-sans-serif: 'Montserrat', sans-serif;
+$font-family-sans-decor: 'Great Vibes', cursive;
+$font-family-sans-cormorant: 'Cormorant', serif;
+
+
+// SPACE
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  sm: $spacer * 0.75,
+  md: $spacer * 3.3,
+  max: $spacer * 5,
+);
+
+// NAVBAR
+$navbar-nav-link-padding-x: $spacer * 1.5;
+
+//FONT
+// FONT WEIIGHT
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-medium:          500;
+$font-weight-semi-bold:       600;
+$font-weight-bold:            700;
+$font-weight-bolder:          bolder;
+
+// FONT SIZE
+$font-size-root:              null;
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+$hmd-font-size:               $font-size-base * .813;
+$hx-large-font-size:          $font-size-base * 1.19;
+$h-extra-large-font-size:     $font-size-base * 3.75;
+$hxx-extra-large-font-size:     $font-size-base * 5.93;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  md: $hmd-font-size,
+  hx: $hx-large-font-size,
+  hxl: $h-extra-large-font-size,
+  hxx: $hxx-extra-large-font-size
+);
+
+// LINE HEIGHT
+$line-height-base:            1.5;
+$line-height-sm:              1.25;
+$line-height-lg:              2;
+$line-height-xlg:             70;
+
+
+
+// BUTTONS
+$btn-border-radius:           0;
+$btn-border-radius-sm:        0;
+$btn-border-radius-lg:        0;
+
+$input-btn-padding-y:         .375rem;
+$input-btn-padding-x:         .75rem;
+$btn-padding-y:               $input-btn-padding-y;
+$btn-padding-x:               $input-btn-padding-x * 3;
+
+
+
+// NATIVE GRID
+$enable-cssgrid: true;
